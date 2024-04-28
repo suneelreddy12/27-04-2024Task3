@@ -16,8 +16,7 @@ inp.question("Enter numbers separated by space: ", (data) => {
 });
 
 // Define a function to print odd numbers - Function Expression
-const anonymousFunction = function (arr) {
-  //anonymous function
+const anonymousFunction = function (arr) { //anonymous function
   for (let i = 0; i < arr.length; i++) {
     let num = arr[i];
     if (num % 2 != 0) {
