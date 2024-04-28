@@ -15,35 +15,35 @@ inp.question("Enter numbers separated by space: ", (data) => {
   inp.close();
 });
 
-// function to print odd numbers - Function Expression
-const anonymousFunction = function (arr) { //anonymous function
-  for (let i = 0; i < arr.length; i++) {
-    let num = arr[i];
-    if (num % 2 != 0) {
-      console.log(num);
+// function to print sum of numbers - Function Expression
+const anonymousFunc = function(arr) {
+    let output = 0;
+    for(let i = 0; i < arr.length; i++) {
+        output += arr[i];
     }
-  }
+    console.log(output);
 };
 
-// function to print odd numbers - Arrow Function
+// function to print sum of numbers - Arrow Function
 const arrowFunc = (arr) => {
-  arr.forEach(num => {
-    if (num % 2 != 0) {
-      console.log(num);
-    }
-  });
+    console.log(helperSum(arr));
+};
+
+// Helper Function
+const helperSum = (arr) => {
+    let output = 0;
+    arr.forEach(num => {
+        output += num;
+    });
+    return output;
 };
 
 inp.on("close", () => {
   // Immediately Invoked Function Expression (IIFE) to print odd numbers
   (function (arr) {
-    arr.forEach(function (num) { //anonymous function starts here
-      if (num % 2 != 0) {
-        console.log(num);
-      }
-    }); //anonyomus function ends here
+    console.log(helperSum(arr));
   })(numbers);
 
-  anonymousFunction(numbers);
+  anonymousFunc(numbers);
   arrowFunc(numbers);
 });

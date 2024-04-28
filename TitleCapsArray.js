@@ -20,7 +20,7 @@ const toTitleCaps = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 //str.split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" "); //muliple strings with space seperated can use this
 //str.replace(/\b\w/g, (char) => char.toUpperCase());(using regular expression)
 
-// Define a function to print title caps - Function Expression
+// function to print title caps - Function Expression
 const anonymousFunc = function (arr) { //anonymous function
   let output = [];
   for (let i = 0; i < arr.length; i++) {
@@ -29,10 +29,10 @@ const anonymousFunc = function (arr) { //anonymous function
   console.log(output.join(" "));
 };
 
-// Define a function to print title caps - arrow Expression
+// function to print title caps - arrow Expression
 const arrowFunc = (arr) => {
   let output = [];
-  arr.forEach((str) => {
+  arr.forEach(str => {
     output.push(toTitleCaps(str));
   });
   console.log(output.join(" "));
