@@ -15,10 +15,9 @@ inp.question("Enter numbers separated by space: ", (data) => {
   inp.close();
 });
 
-// function to print odd numbers - Function Expression
+// function to print prime numbers - Function Expression
 const anonymousFunc = function (arr) {
-  for (let i = 0; i < arr.length; i++) {
-    //anonymous function
+  for (let i = 0; i < arr.length; i++) { //anonymous function
     const num = arr[i];
     if (isPrime(num)) {
       console.log(num);
@@ -26,7 +25,7 @@ const anonymousFunc = function (arr) {
   }
 };
 
-// function to print odd numbers - Arrow Function
+// function to print prime numbers - Arrow Function
 const arrowFunc = (arr) => {
   arr.forEach((num) => {
     if (isPrime(num)) {
@@ -49,7 +48,7 @@ const isPrime = (num) => {
 };
 
 inp.on("close", () => {
-  // Immediately Invoked Function Expression (IIFE) to print odd numbers
+  // Immediately Invoked Function Expression (IIFE) to print prime numbers
   (function (arr) {
     arr.forEach(function(num) { //anonymous function starts here
         if (isPrime(num)) {

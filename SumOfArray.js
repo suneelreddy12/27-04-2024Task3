@@ -39,7 +39,7 @@ const helperSum = (arr) => {
 };
 
 inp.on("close", () => {
-  // Immediately Invoked Function Expression (IIFE) to print odd numbers
+  // Immediately Invoked Function Expression (IIFE) to print sum of array
   (function (arr) {
     console.log(helperSum(arr));
   })(numbers);
