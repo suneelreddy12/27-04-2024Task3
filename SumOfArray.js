@@ -16,7 +16,7 @@ inp.question("Enter numbers separated by space: ", (data) => {
 });
 
 // function to print sum of numbers - Function Expression
-const anonymousFunc = function(arr) {
+const anonymousFunc = function(arr) { //anonymous function
     let output = 0;
     for(let i = 0; i < arr.length; i++) {
         output += arr[i];
