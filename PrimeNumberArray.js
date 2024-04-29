@@ -16,8 +16,8 @@ inp.question("Enter numbers separated by space: ", (data) => {
 });
 
 // function to print prime numbers - Function Expression
-const anonymousFunc = function (arr) {
-  for (let i = 0; i < arr.length; i++) { //anonymous function
+const anonymousFunc = function (arr) { //anonymous function
+  for (let i = 0; i < arr.length; i++) {
     const num = arr[i];
     if (isPrime(num)) {
       console.log(num);
